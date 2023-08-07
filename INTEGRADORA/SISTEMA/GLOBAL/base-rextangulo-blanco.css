@@ -1,0 +1,120 @@
+/* PARTE GENERAL DE LA PAGINA */
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--color-utez-azul);
+}
+/* Para hacer flex la parte superior de la pagina y darle su respectivo formato*/
+.flex-end {
+    display: flex;
+    justify-content: space-between;
+}
+.header{
+    margin: .2rem;
+}
+/* Es para darle formato al logo de la universidad */
+.img-u {
+    width: 4rem;
+    height: 3rem;
+    cursor: pointer;
+}
+/* Este apartado es para darle formato a la parte de navegacion, la barra blanca con los iconos */
+.navegation {
+    display: flex;
+    width: 20rem;
+    height: 1.5rem;
+    background-color: var(--color-claro-blanco);
+    justify-content: space-evenly;
+    padding: .2rem;
+    border-radius: 1rem;
+    margin-top: .2rem;
+}
+.nav {
+    cursor: pointer;
+}
+/* Sirve para darle formato a los botones azules como es el de "SALIR" y "PERFIL" */
+.btn-blue{
+    transition: 1s;
+    margin: .5rem 2rem;
+    width: 3rem;
+    height: 1rem;
+    font-size: .4rem;
+    background-color: transparent;
+    
+    text-transform:uppercase;
+    border: .05rem solid var(--color-claro-blanco);
+    border-radius: 1rem;
+    color: var(--color-claro-blanco);
+    cursor: pointer;
+}
+.btn-blue:hover {
+    transition: .5s;
+    background-color: var(--color-claro-blanco);
+    color: var(--color-utez-azul);
+    border-style: none;
+}
+/* Sirve para darle formato a los botones verdes de confirmacion */
+.btn-green{
+    transition: 1s;
+    margin: .5rem 2rem;
+    width: 3rem;
+    height: 1rem;
+    font-size: .4rem;
+    background-color: var(--color-utez-verde-claro);
+    
+    text-transform:uppercase;
+    border: .05rem solid var(--color-claro-blanco);
+    border-radius: 1rem;
+    color: var(--color-claro-blanco);
+    cursor: pointer;
+}
+.btn-green:hover {
+    transition: .5s;
+    background-color: var(--color-claro-blanco);
+    color: var(--color-utez-verde-claro);
+    border-style: ridge;
+    border-color: var(--color-utez-verde-claro);
+}
+/* Sirve para darle formato a los botones blancos en el apartado de inicio para "PERFIL" */
+.btn-white{
+    transition: 1s;
+    margin: .5rem 2rem;
+    width: 3rem;
+    height: 1rem;
+    font-size: .4rem;
+    background-color: transparent;
+    
+    text-transform:uppercase;
+    border: .05rem solid var(--color-utez-azul);
+    border-radius: 1rem;
+    color: var(--color-utez-azul);
+    cursor: pointer;
+}
+.btn-white:hover {
+    transition: .5s;
+    background-color: var(--color-utez-azul);
+    color: var(--color-claro-blanco);
+    border-style: ridge;
+    border-color: var(--color-utez-azul);
+}
+/* Esta parte es para lo blanco en donde ira toda la informacion central, el mensaje de la pagina */
+.content
+{
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.fondo
+{
+    background-color: var(--color-claro-blanco);
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem 0 0 1rem;
+    padding: 2rem 0 3rem 3rem;
+}

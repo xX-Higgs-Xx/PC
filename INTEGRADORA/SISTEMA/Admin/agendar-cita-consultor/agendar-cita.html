@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/css_agendar-cita.css">
+    <link rel="stylesheet" href="../../GLOBAL/base-rextangulo-blanco.css">
+    <link rel="stylesheet" href="../../GLOBAL/style.css">
+    <title>Agendar Cita</title>
+</head>
+<body>
+    <div class="content-body">
+        <div class="header flex-end">
+         <img src="../../GLOBAL/img/logo-utez.png" alt="" class="img-u">
+         <div class="navegation">
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon nav" width="48" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                    <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+                    <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                    <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+                    <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+                    <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+                  </svg>
+            </p>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon nav" width="48" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+                    <path d="M16 3l0 4" />
+                    <path d="M8 3l0 4" />
+                    <path d="M4 11l16 0" />
+                    <path d="M8 15h2v2h-2z" />
+                </svg>
+            </p>
+            <p>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon nav" width="48" height="36" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" />
+                </svg>
+            </p>
+        </div>
+            <button class="btn-blue">Salir</button>
+        </div>
+        <div class="content-complete">
+            <div class="fondo-complete">
+              <form id="miFormulario" method="POST" class="container">
+                    <div class="title">
+                        <div class="tutor txt-4-green">
+                            <h6>Agendar Cita - Miranda Espinoza Avilés</h6>
+                        </div>
+                        <div class="date txt-3-blue">
+                          <input type="week" id="fecha" name="fecha">
+                        </div>
+                    </div>
+                    <div class="horas txt-2-gray">
+                      <div class="col p-3">
+                        <div></div>
+                      </div>
+                      <div class="col">
+                        <div>8:00-9:00</div>
+                      </div>
+                      <div class="col">
+                        <div>9:00-10:00</div>
+                      </div>
+                      <div class="col">
+                        <div>10:00-11:00</div>
+                      </div>
+                      <div class="col">
+                        <div>11:00-12:00</div>
+                      </div>
+                      <div class="col">
+                        <div>12:00-13:00</div>
+                      </div>
+                      <div class="col">
+                        <div>13:00-14:00</div>
+                      </div>
+                      <div class="col">
+                        <div>14:00-15:00</div>
+                      </div>
+                      <div class="col">
+                        <div>15:00-16:00</div>
+                      </div>
+                      <div class="col">
+                        <div>16:00-17:00</div>
+                      </div>
+                      <div class="col">
+                        <div>17:00-18:00</div>
+                      </div>
+                      <div class="col">
+                        <div>18:00-19:00</div>
+                      </div>
+                      <div class="col">
+                        <div>19:00-20:00</div>
+                      </div>
+                      <div class="col">
+                        <div>20:00-21:00</div>
+                      </div>
+                    </div>
+                      <div id="diasSemana">
+                        <div class="semana">
+                            <div class="dia p-1 txt-2-gray">
+                              <div>Lunes</div>
+                              <div id="lunes"></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="08:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="09:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="10:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="11:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="12:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="13:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="14:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="15:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="16:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="17:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="18:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="19:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro lunes" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                              <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="semana">
+                            <div class="dia p-1 txt-2-gray">
+                              <div>Martes</div>
+                              <div id="martes"></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="08:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="09:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="10:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="11:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="12:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="13:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="14:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="15:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="16:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="17:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="18:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="19:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro martes" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                              <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="semana">
+                            <div class="dia p-1 txt-2-gray">
+                              <div>Miercoles</div>
+                              <div id="miercoles"></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="08:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="09:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="10:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="11:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="12:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="13:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="14:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="15:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="16:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="17:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="18:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="19:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro miercoles" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                              <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="semana">
+                            <div class="dia p-1 txt-2-gray">
+                              <div>Jueves</div>
+                              <div id="jueves"></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="08:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="09:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="10:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="11:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="12:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="13:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="14:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="15:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="16:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="17:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="18:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="19:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro jueves" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                              <div></div>
+                            </div>
+                        </div>
+    
+                        <div class="semana">
+                            <div class="dia p-1 txt-2-gray">
+                              <div>Viernes</div>
+                              <div id="viernes"></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="08:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="09:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="10:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="11:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="12:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="13:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="14:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="15:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="16:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="17:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="18:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="19:00:00">
+                              <div></div>
+                            </div>
+                            <div class="col border border-text p-2 select hora-cuadro viernes" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                              <div></div>
+                            </div>
+                        </div>
+
+                        <div class="semana">
+                          <div class="dia p-1 txt-2-gray">
+                            <div>Sabado</div>
+                            <div id="sabado"></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="08:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="09:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="10:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="11:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="12:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="13:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="14:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="15:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="16:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="17:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="18:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="19:00:00">
+                            <div></div>
+                          </div>
+                          <div class="col border border-text p-2 select hora-cuadro sabado" data-hora="20:00:00" style="border-radius: 0 1rem 1rem 0">
+                            <div></div>
+                          </div>
+                      </div>
+                    </div>
+
+                  </form>
+                  <input type="hidden" name="fecha" id="form2">
+            </div>            
+            
+            <div class="boton">
+                <button class="btn-blue">anterior</button>
+                <button class="btn-blue">siguiente</button>
+            </div>
+          </div>
+        </div>
+              
+    </body>
+    <script src="script/script.js"></script>
+</html>

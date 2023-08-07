@@ -1,0 +1,5 @@
+Datos que se requieren para los usuarios
+-Pendiente para mandar por correo para identificarlos en la base de datos
+-Queda a disposicion de las habilidades que tenemos para reaizar lo planeado en el prototipo
+-impresion del reporte en la web, en donde se mostraran los estudiantes atendidos: y cuatrimestre: en dos diferentes tablas
+para poder identificar los apartados. NO ES NECESARIO QUE LO HAGAMO EN UN PDF.

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>        
+    <div id="app" class="container">
+        <div class="row">
+            <table id="miTabla" style="display: none;">
+                        <tr>
+                          <th>nombre</th>
+                          <th>edad</th>
+                          <th>genero</th>
+                        </tr>
+                        <tr>
+                          <td>Jared</td>
+                          <td>20</td>
+                          <td>Lo que caiga</td>
+                        </tr>
+                        <tr>
+                          <td>Alberto</td>
+                          <td>18</td>
+                          <td>Unicornio</td>
+                        </tr>
+                        <tr>
+                          <td>Ana</td>
+                          <td>28</td>
+                          <td>Femenino</td>
+                        </tr>
+                        <tr>
+                            <td>Jael</td>
+                            <td>18</td>
+                            <td>Femenino</td>
+                          </tr>
+                          <tr>
+                            <td>Laura</td>
+                            <td>28</td>
+                            <td>Femenino</td>
+                          </tr>
+                          <tr>
+                            <td>Adrian</td>
+                            <td>28</td>
+                            <td>Masculino</td>
+                          </tr>
+                          <tr>
+                            <td>Karina</td>
+                            <td>28</td>
+                            <td>Femenino</td>
+                          </tr>
+            </table>
+            <input type="text" id="inputFiltro" placeholder="Buscar por nombre">
+            <table id="tablaHTML">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+            <div id="paginado"></div>
+        </div>
+</body>
+<script src="script/script.js"></script>
+</html>

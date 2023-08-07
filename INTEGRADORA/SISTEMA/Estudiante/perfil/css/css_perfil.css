@@ -1,0 +1,42 @@
+.boton {
+    margin-left: 1rem;
+    margin: 10rem auto;
+}
+.nombre-alumno {
+    text-align: left;
+}
+.carrera {
+    margin-top: 3rem;
+}
+.info {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    font-size: .7rem;
+    margin-top: 2rem;
+}
+.text{
+    color: black;
+    font-style: normal;
+}
+.cambio-passwd {
+    display: flex;
+    justify-content: space-around;
+    font-size: .6rem;
+    text-align: left;
+    text-transform: uppercase;
+    margin-top: 1.6rem;
+}
+.box {
+    border-radius: 2rem;
+    height: 1.5rem;
+    margin-top: -.3rem;
+    font-size: .5rem;
+}
+.form-control{
+    width: 10rem;
+    background-color: var(--color-claro-blanco);
+}
+.submit {
+    text-align: right;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seleccionar día y hora</title>
+    <style>
+        /* Estilos para el input de tipo week */
+        input[type="week"] {
+            margin-bottom: 10px;
+        }
+
+        /* Estilos para el contenedor de horas */
+        .horas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        /* Estilos para cada hora */
+        .hora {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        /* Estilos para el div seleccionado */
+        .seleccionado {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Selecciona una semana y una hora</h2>
+    <input type="week" id="semana" name="semana">
+    <div class="horas" id="contenedorHoras">
+        <div class="hora">09:00</div>
+        <div class="hora">10:00</div>
+        <div class="hora">11:00</div>
+        <div class="hora">12:00</div>
+        <div class="hora">13:00</div>
+        <div class="hora">14:00</div>
+    </div>
+    <input type="hidden" id="resultado" name="resultado">
+
+    <script>
+        const horasDivs = document.querySelectorAll('.hora');
+        const semanaInput = document.getElementById('semana');
+        const resultadoInput = document.getElementById('resultado');
+
+        horasDivs.forEach(horaDiv => {
+            horaDiv.addEventListener('click', () => {
+                // Obtener la hora y el día seleccionados
+                const semana = semanaInput.value;
+                const hora = horaDiv.textContent;
+
+                // Almacenar el resultado en el input hidden
+                resultadoInput.value = `Fecha y hora seleccionada: ${semana}, ${hora}`;
+
+                // Cambiar el color del div seleccionado
+                horasDivs.forEach(div => {
+                    div.classList.remove('seleccionado');
+                });
+                horaDiv.classList.add('seleccionado');
+            });
+        });
+    </script>
+</body>
+</html>

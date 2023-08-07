@@ -1,0 +1,51 @@
+.usuarios {
+    display:block;
+    justify-content: center;
+    margin: 6rem 1rem;
+}
+.user {
+    
+    color: var(--color-claro-blanco);
+    padding: 1rem 0;
+}
+.users{
+    text-decoration: none;
+    font-size: .8rem;
+}
+@media (max-height: 769px) {
+    .fondo {
+        padding: .5rem 0 3rem .2rem;
+    }
+}
+.fondo h4 {
+    font-size: 1rem;
+}
+.icon{
+    width: 1rem;
+    height: 1rem;
+}
+.box{
+    margin: 0.5rem 7rem;
+    padding-top: .5rem;
+}
+@media (max-height: 769px) {
+    .box {
+        margin: 0 2rem;
+    }
+}
+.title{
+    text-align: left;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+.fila{
+    font-size: .7rem;
+    text-align: left;
+    padding: 0 0 .2rem 3rem;
+}
+.fila:hover {
+    background-color: #29bb9b4f;
+    border-radius: .4rem;
+    cursor: pointer;
+    transition: .5s;
+}

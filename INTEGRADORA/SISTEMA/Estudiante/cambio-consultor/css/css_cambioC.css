@@ -1,0 +1,54 @@
+@font-face
+{
+	font-family: "Asap Condensed";
+	src: url('fonts/AsapCondensed-SemiBold.ttf') format('truetype');
+}
+.content-body
+{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.text-header{
+    margin-top: 1rem;
+    color: var(--color-utez-verde-claro);
+    text-align: center;
+    font-family: 'Asap Condensed';
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.boton {
+    margin-left: 1rem;
+    margin: 10rem auto;
+}
+.icon{
+    width: 1rem;
+    height: 1rem;
+
+}
+
+.text-info {
+    font-size: .8rem;
+    margin-top: 2rem;
+    margin-left: 5rem;
+    width: 50vw;
+    text-align: left;
+}
+.just::placeholder {
+    font-weight: 300;
+}
+.just {
+    width: 60vw;
+    height: 8vh;
+    padding: 0.8rem;
+    margin-left: 5rem;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);   
+}
+.submit {
+    width: 72vw;
+    text-align: right;
+    margin-top: 1rem;
+}

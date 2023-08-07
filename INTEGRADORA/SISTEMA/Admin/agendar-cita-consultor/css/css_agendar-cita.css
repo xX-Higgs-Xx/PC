@@ -1,0 +1,63 @@
+.fondo-complete
+{
+    background-color: var(--color-claro-blanco);
+    background-size: cover;
+    height: 77vh;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 1.5rem 0 3rem 3rem;
+}
+.boton {
+    display: flex;
+    justify-content: space-between;
+}
+.icon{
+    width: 1rem;
+    height: 1rem;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+.date {
+    margin-right: 1.5rem;
+    font-size: .8rem;
+    border-radius: .3rem;
+}
+.container {
+    margin-top: 1rem;
+    width: auto;
+    font-size: .4rem;
+}
+.horas {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    height: .5rem;
+}
+.semana {
+    margin-top: .5rem;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    height: 1.5rem;
+}
+.dia {
+    font-size: .45rem;
+    width: 4.5rem;
+    text-transform: uppercase;
+}
+.select {
+    transition: .3s;
+}
+.select:hover {
+    background-color: var(--color-utez-verde-claro);
+    transition: .5s;
+    cursor: pointer;
+}
+
+/* Estilos para el div seleccionado */
+.seleccionado {
+    background-color: var(--color-utez-verde-claro);
+}
